@@ -36,6 +36,7 @@ lib Raymath
   fun vector2_transform = Vector2Transform(v : Raylib::Vector2, mat : Raylib::Matrix) : Raylib::Vector2
   fun vector2_lerp = Vector2Lerp(v1 : Raylib::Vector2, v2 : Raylib::Vector2, amount : LibC::Float) : Raylib::Vector2
   fun vector2_reflect = Vector2Reflect(v : Raylib::Vector2, normal : Raylib::Vector2) : Raylib::Vector2
+  fun vector2min = Vector2Min(v1 : Raylib::Vector2, v2 : Raylib::Vector2) : Raylib::Vector2
   fun vector2_rotate = Vector2Rotate(v : Raylib::Vector2, angle : LibC::Float) : Raylib::Vector2
   fun vector2_move_towards = Vector2MoveTowards(v : Raylib::Vector2, target : Raylib::Vector2, max_distance : LibC::Float) : Raylib::Vector2
   fun vector2_invert =  Vector2Invert(v : Raylib::Vector2) : Raylib::Vector2
@@ -481,6 +482,9 @@ struct Raylib::Vector3
   def /(other : Number) : Raylib::Vector3
     self.scale((1/other).to_f32)
   end
+end
+
+struct Raylib::Vector4
 end
 
 struct Raylib::Matrix
